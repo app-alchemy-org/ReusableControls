@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ReusableControlsTest.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
+    xmlns:viewModels="clr-namespace:ReusableControlsTest.ViewModels"
+    Title="HomePage">
+    <ContentPage.BindingContext>
+        <viewModels:HomeViewModel />
+    </ContentPage.BindingContext>
+    <Grid
+        BackgroundColor="#385C9B"
+        RowDefinitions="Auto,*">
+        <Label
+            Grid.Row="0"
+            Text="Dashboard" />
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto,*">
+            <Label
+                Grid.Row="0"
+                Text="Favourites" />
+            <controls:DeviceCard
+                Name="Sammy"
+                Title="Living Room"
+                Grid.Row="1"
+                IconUri="dotnet_bot.png"
+                Status="Offline" />
+        </Grid>
+
+    </Grid>
+</ContentPage>
