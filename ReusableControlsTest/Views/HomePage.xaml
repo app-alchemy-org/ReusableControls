@@ -49,6 +49,8 @@
                             Name="{Binding Name}"
                             Title="{Binding Title}"
                             Grid.Row="1"
+                            Command="{Binding DeviceTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}"
+                            CommandParameter="{Binding .}"
                             IconUri="{Binding IconUri}"
                             Status="{Binding Status}" />
                     </DataTemplate>

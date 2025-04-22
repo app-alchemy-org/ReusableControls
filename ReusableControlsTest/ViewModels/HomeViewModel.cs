@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace ReusableControlsTest.ViewModels
 {
@@ -13,6 +14,8 @@ namespace ReusableControlsTest.ViewModels
     {
         public HomeViewModel()
         {
+            DeviceTappedCommand = new Command<DeviceModel?>(DeviceTappedCommandHandler);
+
             DeviceList = new ObservableCollection<DeviceModel>
             {
                 new DeviceModel
@@ -45,5 +48,14 @@ namespace ReusableControlsTest.ViewModels
                 }
             }
         }
+
+        public ICommand DeviceTappedCommand { get; private set; }
+        private void DeviceTappedCommandHandler(DeviceModel? deviceModel)
+        {
+            if (deviceModel == null) return;
+
+            Console.WriteLine(deviceModel.Title);
+        }
+
     }
 }

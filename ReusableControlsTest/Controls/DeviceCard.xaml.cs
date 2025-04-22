@@ -1,3 +1,5 @@
+using System.Windows.Input;
+
 namespace ReusableControlsTest.Controls;
 
 public partial class DeviceCard : ContentView
@@ -37,6 +39,22 @@ public partial class DeviceCard : ContentView
     {
         get => (string)GetValue(IconUriProperty);
         set => SetValue(IconUriProperty, value);
+    }
+
+    public static readonly BindableProperty CommandProperty = CreateBindableProperty<ICommand?>(nameof(Command), null);
+
+    public ICommand? Command
+    {
+        get => (ICommand?)GetValue(CommandProperty);
+        set => SetValue(CommandProperty, value);
+    }
+
+    public static readonly BindableProperty CommandParameterProperty = CreateBindableProperty<object?>(nameof(CommandParameter), null);
+
+    public object? CommandParameter
+    {
+        get => (object?)GetValue(CommandParameterProperty);
+        set => SetValue(CommandParameterProperty, value);
     }
 
     private static BindableProperty CreateBindableProperty<T>(
