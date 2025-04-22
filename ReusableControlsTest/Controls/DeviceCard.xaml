@@ -6,47 +6,41 @@
     <ContentView.ControlTemplate>
         <ControlTemplate>
             <Grid
-                HeightRequest="110"
-                WidthRequest="150">
+                HeightRequest="110">
                 <Frame
-                    BackgroundColor="Black"
-                    BorderColor="Transparent"
-                    CornerRadius="20"
-                    Opacity="0.5" />
-                <Grid
                     Margin="0"
-                    Padding="10"
-                    ColumnDefinitions="*,*"
-                    Opacity="1"
-                    RowDefinitions="Auto,*">
-                    <Image
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalOptions="Start"
-                        Source="{TemplateBinding IconUri}"
-                        WidthRequest="50" />
-                    <VerticalStackLayout
-                        Grid.Row="1"
-                        Grid.ColumnSpan="2">
-                        <Label
-                            FontSize="Micro"
-                            Text="{TemplateBinding Title}" />
-                        <Label
-                            FontSize="Caption"
-                            Text="{TemplateBinding Name}"
-                            TextColor="LightGray" />
-                        <Label
-                            FontSize="Caption"
-                            Text="{TemplateBinding Status}"
-                            TextColor="LightGray" />
-                    </VerticalStackLayout>
-                    <Image
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="End"
-                        Source="{TemplateBinding IconUri}"
-                        WidthRequest="40" />
-                </Grid>
+                    Padding="12"
+                    BackgroundColor="#50000000"
+                    BorderColor="Transparent"
+                    CornerRadius="20">
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        Opacity="1"
+                        RowDefinitions="Auto,*"
+                        RowSpacing="3">
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Start"
+                            Source="{TemplateBinding IconUri}"
+                            WidthRequest="27" />
+                        <VerticalStackLayout
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2">
+                            <Label
+                                FontSize="Small"
+                                Text="{TemplateBinding Title}" />
+                            <Label
+                                FontSize="Caption"
+                                Text="{TemplateBinding Name}"
+                                TextColor="LightGray" />
+                            <Label
+                                FontSize="Caption"
+                                Text="{TemplateBinding Status}"
+                                TextColor="LightGray" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
             </Grid>
         </ControlTemplate>
     </ContentView.ControlTemplate>

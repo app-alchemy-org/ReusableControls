@@ -5,13 +5,25 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
     xmlns:viewModels="clr-namespace:ReusableControlsTest.ViewModels"
-    Title="HomePage">
+    BackgroundColor="#385C9B"
+    NavigationPage.HasNavigationBar="True">
     <ContentPage.BindingContext>
         <viewModels:HomeViewModel />
     </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <Grid
+            BackgroundColor="Black"
+            ColumnDefinitions="*,Auto"
+            HeightRequest="200">
+            <Label
+                Grid.Column="0"
+                Text="My Home" />
+        </Grid>
+    </NavigationPage.TitleView>
     <Grid
-        BackgroundColor="#385C9B"
-        RowDefinitions="Auto,*">
+        Padding="10"
+        RowDefinitions="Auto,*"
+        RowSpacing="15">
         <Label
             Grid.Row="0"
             Text="Dashboard" />
@@ -21,12 +33,28 @@
             <Label
                 Grid.Row="0"
                 Text="Favourites" />
-            <controls:DeviceCard
-                Name="Sammy"
-                Title="Living Room"
+            <CollectionView
                 Grid.Row="1"
-                IconUri="dotnet_bot.png"
-                Status="Offline" />
+                ItemsSource="{Binding DeviceList}"
+                SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="10"
+                        Orientation="Vertical"
+                        Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:DeviceCard
+                            Name="{Binding Name}"
+                            Title="{Binding Title}"
+                            Grid.Row="1"
+                            IconUri="{Binding IconUri}"
+                            Status="{Binding Status}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </Grid>
 
     </Grid>

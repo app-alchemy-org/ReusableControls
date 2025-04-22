@@ -57,6 +57,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\aircon.png" />
+	  <None Remove="Resources\Images\devices.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\life.png" />
+	  <None Remove="Resources\Images\menu.png" />
+	  <None Remove="Resources\Images\routines.png" />
+	  <None Remove="Resources\Images\tv.png" />
+	  <None Remove="Resources\Images\watch.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
