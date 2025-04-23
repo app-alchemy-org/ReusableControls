@@ -1,8 +1,8 @@
 namespace ReusableControlsTest.Views;
 
-public partial class HomePage : ContentPage
+public partial class HomeTab : ContentPage
 {
-	public HomePage()
+	public HomeTab()
 	{
 		InitializeComponent();
 	}

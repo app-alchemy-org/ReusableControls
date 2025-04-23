@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ReusableControlsTest.Views.DeviceSettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
+    xmlns:viewModels="clr-namespace:ReusableControlsTest.ViewModels"
+    Title="DeviceSettingsPage">
+    <ContentPage.BindingContext>
+        <viewModels:DeviceSettingsPageViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout
+        Padding="10"
+        Spacing="10">
+        <controls:Card>
+            <controls:SwitchControl
+                Title="Welcome cooling"
+                Description="As you get closer to home you will receive a notification so you can turn on the air conditioner in advance" />
+        </controls:Card>
+        <controls:Card>
+            <controls:SwitchControl
+                Title="Auto dry"
+                Description="Hygenically dry all internal moisture after cooling is complete" />
+        </controls:Card>
+        <controls:Card>
+            <VerticalStackLayout
+                Spacing="10">
+                <controls:SwitchControl
+                    Title="Lighting" />
+                <BoxView
+                    HeightRequest="1"
+                    Color="Gray" />
+                <controls:SwitchControl
+                    Title="Beep" />
+            </VerticalStackLayout>
+        </controls:Card>
+    </VerticalStackLayout>
+</ContentPage>

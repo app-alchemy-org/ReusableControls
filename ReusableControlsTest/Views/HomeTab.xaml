@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="ReusableControlsTest.Views.HomePage"
+    x:Class="ReusableControlsTest.Views.HomeTab"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
     xmlns:viewModels="clr-namespace:ReusableControlsTest.ViewModels"
-    BackgroundColor="#385C9B"
     NavigationPage.HasNavigationBar="True">
     <ContentPage.BindingContext>
-        <viewModels:HomeViewModel />
+        <viewModels:HomeTabViewModel />
     </ContentPage.BindingContext>
     <NavigationPage.TitleView>
         <Grid
@@ -49,7 +48,7 @@
                             Name="{Binding Name}"
                             Title="{Binding Title}"
                             Grid.Row="1"
-                            Command="{Binding DeviceTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}"
+                            Command="{Binding DeviceTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:HomeTabViewModel}}}"
                             CommandParameter="{Binding .}"
                             IconUri="{Binding IconUri}"
                             Status="{Binding Status}" />

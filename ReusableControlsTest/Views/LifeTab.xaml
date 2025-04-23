@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ReusableControlsTest.Views.LifeTab"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
+    xmlns:viewModels="clr-namespace:ReusableControlsTest.ViewModels">
+    <ContentPage.BindingContext>
+        <viewModels:LifeTabViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout
+        Padding="10"
+        Spacing="10">
+        <controls:LifeCard
+            Title="Food"
+            Description="Answer a few questions about your food preferences to get personalized receipe recommendations."
+            ImageUri="dotnet_bot.png" />
+        <controls:LifeCard
+            Title="Energy"
+            Description="Add an applianceto start measuring energy usage."
+            ImageUri="dotnet_bot.png" />
+    </VerticalStackLayout>
+</ContentPage>

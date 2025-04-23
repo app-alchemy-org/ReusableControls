@@ -1,4 +1,5 @@
 ﻿using ReusableControlsTest.Models;
+using ReusableControlsTest.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,9 +11,9 @@ using System.Windows.Input;
 
 namespace ReusableControlsTest.ViewModels
 {
-    internal class HomeViewModel : BaseViewModel
+    internal class HomeTabViewModel : BaseViewModel
     {
-        public HomeViewModel()
+        public HomeTabViewModel()
         {
             DeviceTappedCommand = new Command<DeviceModel?>(DeviceTappedCommandHandler);
 
@@ -54,7 +55,7 @@ namespace ReusableControlsTest.ViewModels
         {
             if (deviceModel == null) return;
 
-            Console.WriteLine(deviceModel.Title);
+            Shell.Current.GoToAsync(nameof(DeviceSettingsPage));
         }
 
     }

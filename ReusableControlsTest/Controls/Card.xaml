@@ -8,7 +8,7 @@
             <Frame
                 Margin="0"
                 Padding="11"
-                BackgroundColor="#50000000"
+                BackgroundColor="#60000000"
                 BorderColor="Transparent"
                 CornerRadius="20">
                 <ContentPresenter />

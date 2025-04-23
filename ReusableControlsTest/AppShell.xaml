@@ -12,31 +12,31 @@
             Title="Home"
             Icon="home.png">
             <ShellContent
-                ContentTemplate="{DataTemplate views:HomePage}" />
+                ContentTemplate="{DataTemplate views:HomeTab}" />
         </Tab>
         <Tab
             Title="Devices"
             Icon="devices.png">
             <ShellContent
-                ContentTemplate="{DataTemplate views:HomePage}" />
+                ContentTemplate="{DataTemplate views:HomeTab}" />
         </Tab>
         <Tab
             Title="Life"
             Icon="life.png">
             <ShellContent
-                ContentTemplate="{DataTemplate views:HomePage}" />
+                ContentTemplate="{DataTemplate views:LifeTab}" />
         </Tab>
         <Tab
             Title="Routines"
             Icon="routines.png">
             <ShellContent
-                ContentTemplate="{DataTemplate views:HomePage}" />
+                ContentTemplate="{DataTemplate views:HomeTab}" />
         </Tab>
         <Tab
             Title="Menu"
             Icon="menu.png">
             <ShellContent
-                ContentTemplate="{DataTemplate views:HomePage}" />
+                ContentTemplate="{DataTemplate views:HomeTab}" />
         </Tab>
     </TabBar>
 
