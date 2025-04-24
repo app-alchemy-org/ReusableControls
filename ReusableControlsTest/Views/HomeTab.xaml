@@ -19,15 +19,19 @@
                 Text="My Home" />
         </Grid>
     </NavigationPage.TitleView>
-    <Grid
+    <VerticalStackLayout
         Padding="10"
-        RowDefinitions="Auto,*"
-        RowSpacing="15">
-        <Label
-            Grid.Row="0"
-            Text="Dashboard" />
+        Spacing="15">
         <Grid
-            Grid.Row="1"
+            RowDefinitions="Auto,*">
+            <Label
+                Grid.Row="0"
+                Text="Dashboard" />
+            <controls:Card
+                Grid.Row="1"
+                HeightRequest="80" />
+        </Grid>
+        <Grid
             RowDefinitions="Auto,*">
             <Label
                 Grid.Row="0"
@@ -57,6 +61,5 @@
             </CollectionView>
 
         </Grid>
-
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>

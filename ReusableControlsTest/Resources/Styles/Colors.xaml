@@ -12,7 +12,7 @@
     </Color>
     <Color
         x:Key="PrimaryDark">
-        #ac99ea
+        #FFFFFF
     </Color>
     <Color
         x:Key="PrimaryDarkText">
@@ -24,7 +24,7 @@
     </Color>
     <Color
         x:Key="SecondaryDarkText">
-        #9880e5
+        #FFFFFF
     </Color>
     <Color
         x:Key="Tertiary">

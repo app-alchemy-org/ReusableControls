@@ -28,8 +28,8 @@
                 <controls:SwitchControl
                     Title="Lighting" />
                 <BoxView
-                    HeightRequest="1"
-                    Color="Gray" />
+                    HeightRequest="0.5"
+                    Color="White" />
                 <controls:SwitchControl
                     Title="Beep" />
             </VerticalStackLayout>
