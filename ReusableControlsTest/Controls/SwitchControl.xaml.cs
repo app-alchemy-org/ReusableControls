@@ -1,3 +1,6 @@
+using BindablePropertyGenerator.Attributes;
+using System.Windows.Input;
+
 namespace ReusableControlsTest.Controls;
 
 public partial class SwitchControl : ContentView
@@ -7,48 +10,15 @@ public partial class SwitchControl : ContentView
 		InitializeComponent();
 	}
 
+    [GenerateBindableProperty(typeof(string))]
     public static readonly BindableProperty TitleProperty = CreateBindableProperty(nameof(Title), "");
 
-    public string Title
-    {
-        get => (string)GetValue(TitleProperty);
-        set => SetValue(TitleProperty, value);
-    }
-
+    [GenerateBindableProperty(typeof(string))]
     public static readonly BindableProperty DescriptionProperty = CreateBindableProperty(nameof(Description), "");
 
-    public string Description
-    {
-        get => (string)GetValue(DescriptionProperty);
-        set => SetValue(DescriptionProperty, value);
-    }
-
+    [GenerateBindableProperty(typeof(string))]
     public static readonly BindableProperty ImageUriProperty = CreateBindableProperty(nameof(ImageUri), "");
 
-    public string ImageUri
-    {
-        get => (string)GetValue(ImageUriProperty);
-        set => SetValue(ImageUriProperty, value);
-    }
-
+    [GenerateBindableProperty(typeof(bool))]
     public static readonly BindableProperty IsToggledProperty = CreateBindableProperty(nameof(IsToggled), false);
-
-    public bool IsToggled
-    {
-        get => (bool)GetValue(IsToggledProperty);
-        set => SetValue(IsToggledProperty, value);
-    }
-
-    private static BindableProperty CreateBindableProperty<T>(
-string propertyName, T defaultValue, BindableProperty.BindingPropertyChangedDelegate propertyChanged = null, BindingMode defaultBindingMode = BindingMode.TwoWay)
-    {
-        return BindableProperty.Create(
-            propertyName: propertyName,
-            returnType: typeof(T),
-            declaringType: typeof(LifeCard),
-            defaultValue: defaultValue,
-            defaultBindingMode: defaultBindingMode,
-            propertyChanged: propertyChanged
-        );
-    }
 }
