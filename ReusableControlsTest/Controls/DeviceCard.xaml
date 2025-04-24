@@ -19,9 +19,9 @@
                         <Image
                             Grid.Row="0"
                             Grid.Column="0"
+                            HeightRequest="25"
                             HorizontalOptions="Start"
-                            Source="{TemplateBinding IconUri}"
-                            WidthRequest="27" />
+                            Source="{TemplateBinding IconUri}" />
                         <VerticalStackLayout
                             Grid.Row="1"
                             Grid.ColumnSpan="2">
