@@ -3,12 +3,14 @@
     x:Class="ReusableControlsTest.Controls.LifeCard"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:ReusableControlsTest.Controls">
-    <ContentView.ControlTemplate>
-        <ControlTemplate>
+    xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
+    x:Name="This">
+    <ContentView.Resources>
+        <ControlTemplate
+            x:Key="ComfortableLayout">
             <controls:Card>
                 <VerticalStackLayout
-                    Spacing="10">
+                    Spacing="5">
                     <Label
                         FontSize="Medium"
                         Text="{TemplateBinding Title}" />
@@ -21,6 +23,41 @@
                 </VerticalStackLayout>
             </controls:Card>
         </ControlTemplate>
-    </ContentView.ControlTemplate>
+        <ControlTemplate
+            x:Key="CompactLayout">
+            <controls:Card>
+                <Grid
+                    ColumnDefinitions="*,100">
+                    <VerticalStackLayout
+                        Grid.Column="0">
+                        <Label
+                            FontSize="Medium"
+                            Text="{TemplateBinding Title}" />
+                        <Label
+                            FontSize="Small"
+                            Text="{TemplateBinding Description}" />
+                    </VerticalStackLayout>
+                    <Image
+                        Grid.Column="1"
+                        Source="{TemplateBinding ImageUri}"
+                        WidthRequest="100" />
+                </Grid>
+            </controls:Card>
+        </ControlTemplate>
+    </ContentView.Resources>
+    <ContentView.Triggers>
+        <DataTrigger
+            Binding="{Binding IsCompactLayout, Source={x:Reference This}}"
+            TargetType="ContentView"
+            Value="True">
+            <Setter Property="ControlTemplate" Value="{StaticResource CompactLayout}" />
+        </DataTrigger>
+        <DataTrigger
+            Binding="{Binding IsCompactLayout, Source={x:Reference This}}"
+            TargetType="ContentView"
+            Value="False">
+            <Setter Property="ControlTemplate" Value="{StaticResource ComfortableLayout}" />
+        </DataTrigger>
+    </ContentView.Triggers>
 
 </ContentView>

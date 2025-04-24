@@ -8,16 +8,33 @@
     <ContentPage.BindingContext>
         <viewModels:LifeTabViewModel />
     </ContentPage.BindingContext>
-    <VerticalStackLayout
-        Padding="12"
-        Spacing="12">
-        <controls:LifeCard
-            Title="Food"
-            Description="Answer a few questions about your food preferences to get personalized receipe recommendations."
-            ImageUri="dotnet_bot.png" />
-        <controls:LifeCard
-            Title="Energy"
-            Description="Add an applianceto start measuring energy usage."
-            ImageUri="dotnet_bot.png" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="12"
+            Spacing="12">
+            <controls:LifeCard
+                Title="Food"
+                Description="Answer a few questions about your food preferences to get personalized receipe recommendations."
+                ImageUri="dotnet_bot.png" />
+            <controls:LifeCard
+                Title="Energy"
+                Description="Add an applianceto start measuring energy usage."
+                ImageUri="dotnet_bot.png" />
+            <controls:LifeCard
+                Title="Family Care"
+                Description="Check your family's safety with SmartDevices anytime for your peace of mind."
+                ImageUri="dotnet_bot.png"
+                IsCompactLayout="True" />
+            <controls:LifeCard
+                Title="Clothing Care"
+                Description="Get clothing care tips and customized cycle recommendations."
+                ImageUri="dotnet_bot.png"
+                IsCompactLayout="True" />
+            <controls:LifeCard
+                Title="Pet Care"
+                Description="Care for your furry friend even when you're not home."
+                ImageUri="dotnet_bot.png"
+                IsCompactLayout="True" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
