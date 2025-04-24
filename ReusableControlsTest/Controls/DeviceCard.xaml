@@ -15,7 +15,7 @@
                         ColumnDefinitions="*,*"
                         Opacity="1"
                         RowDefinitions="Auto,*"
-                        RowSpacing="3">
+                        RowSpacing="5">
                         <Image
                             Grid.Row="0"
                             Grid.Column="0"
@@ -24,7 +24,8 @@
                             Source="{TemplateBinding IconUri}" />
                         <VerticalStackLayout
                             Grid.Row="1"
-                            Grid.ColumnSpan="2">
+                            Grid.ColumnSpan="2"
+                            Spacing="1">
                             <Label
                                 FontSize="Small"
                                 Text="{TemplateBinding Title}" />

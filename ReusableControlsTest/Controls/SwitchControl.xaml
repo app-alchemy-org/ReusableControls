@@ -17,13 +17,13 @@
                     VerticalOptions="Center">
                     <Label
                         Grid.Column="0"
-                        FontSize="Small"
+                        FontSize="Medium"
                         Text="{TemplateBinding Title}"
                         VerticalOptions="Center"
                         VerticalTextAlignment="Center" />
                     <Label
                         Grid.Column="0"
-                        FontSize="Micro"
+                        FontSize="Caption"
                         IsVisible="{TemplateBinding Description,
                                                     Converter={StaticResource IsStringNullOrEmptyConverter}}"
                         Text="{TemplateBinding Description}" />
