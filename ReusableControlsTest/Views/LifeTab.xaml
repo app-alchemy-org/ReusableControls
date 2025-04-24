@@ -9,8 +9,8 @@
         <viewModels:LifeTabViewModel />
     </ContentPage.BindingContext>
     <VerticalStackLayout
-        Padding="10"
-        Spacing="10">
+        Padding="12"
+        Spacing="12">
         <controls:LifeCard
             Title="Food"
             Description="Answer a few questions about your food preferences to get personalized receipe recommendations."

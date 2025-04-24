@@ -20,10 +20,11 @@
         </Grid>
     </NavigationPage.TitleView>
     <VerticalStackLayout
-        Padding="10"
-        Spacing="15">
+        Padding="12"
+        Spacing="20">
         <Grid
-            RowDefinitions="Auto,*">
+            RowDefinitions="Auto,*"
+            RowSpacing="5">
             <Label
                 Grid.Row="0"
                 Text="Dashboard" />
@@ -32,7 +33,8 @@
                 HeightRequest="80" />
         </Grid>
         <Grid
-            RowDefinitions="Auto,*">
+            RowDefinitions="Auto,*"
+            RowSpacing="5">
             <Label
                 Grid.Row="0"
                 Text="Favourites" />
@@ -42,9 +44,10 @@
                 SelectionMode="None">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout
-                        HorizontalItemSpacing="10"
+                        HorizontalItemSpacing="12"
                         Orientation="Vertical"
-                        Span="2" />
+                        Span="2"
+                        VerticalItemSpacing="12" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

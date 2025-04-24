@@ -10,8 +10,8 @@
         <viewModels:DeviceSettingsPageViewModel />
     </ContentPage.BindingContext>
     <VerticalStackLayout
-        Padding="10"
-        Spacing="10">
+        Padding="12"
+        Spacing="12">
         <controls:Card>
             <controls:SwitchControl
                 Title="Welcome cooling"
@@ -24,7 +24,7 @@
         </controls:Card>
         <controls:Card>
             <VerticalStackLayout
-                Spacing="10">
+                Spacing="12">
                 <controls:SwitchControl
                     Title="Lighting" />
                 <BoxView

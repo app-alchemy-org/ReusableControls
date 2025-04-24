@@ -22,7 +22,7 @@ namespace ReusableControlsTest.ViewModels
                 new DeviceModel
                 {
                     Title = "Living Room",
-                    Name = "Sammy",
+                    Name = "Television",
                     Status = "Offline",
                     IconUri = "tv.png"
                 },
@@ -32,6 +32,27 @@ namespace ReusableControlsTest.ViewModels
                     Name = "Aircon",
                     Status = "Off",
                     IconUri = "aircon.png"
+                },
+                new DeviceModel
+                {
+                    Title = "Kitchen",
+                    Name = "Refrigerator",
+                    Status = "Online",
+                    IconUri = "fridge.png"
+                },
+                new DeviceModel
+                {
+                    Title = "Kitchen",
+                    Name = "Blender",
+                    Status = "Online",
+                    IconUri = "blender.png"
+                },
+                new DeviceModel
+                {
+                    Title = "Kitchen",
+                    Name = "Oven",
+                    Status = "Online",
+                    IconUri = "oven.png"
                 }
             };
         }
