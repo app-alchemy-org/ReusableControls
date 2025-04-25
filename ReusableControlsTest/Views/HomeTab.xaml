@@ -3,7 +3,6 @@
     x:Class="ReusableControlsTest.Views.HomeTab"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:ReusableControlsTest.Controls"
     xmlns:viewModels="clr-namespace:ReusableControlsTest.ViewModels"
     NavigationPage.HasNavigationBar="True">
     <ContentPage.BindingContext>
@@ -28,8 +27,11 @@
             <Label
                 Grid.Row="0"
                 Text="Dashboard" />
-            <controls:Card
+            <Frame
                 Grid.Row="1"
+                BackgroundColor="#60000000"
+                BorderColor="Transparent"
+                CornerRadius="20"
                 HeightRequest="80" />
         </Grid>
         <Grid
@@ -50,16 +52,7 @@
                         VerticalItemSpacing="12" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <controls:DeviceCard
-                            Name="{Binding Name}"
-                            Title="{Binding Title}"
-                            Grid.Row="1"
-                            Command="{Binding DeviceTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:HomeTabViewModel}}}"
-                            CommandParameter="{Binding .}"
-                            IconUri="{Binding IconUri}"
-                            Status="{Binding Status}" />
-                    </DataTemplate>
+                    <DataTemplate />
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
