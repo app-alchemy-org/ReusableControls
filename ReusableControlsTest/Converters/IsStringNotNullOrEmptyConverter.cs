@@ -2,7 +2,7 @@
 
 namespace ReusableControlsTest.Converters
 {
-    internal class IsStringNullOrEmptyConverter : IValueConverter
+    internal class IsStringNotNullOrEmptyConverter : IValueConverter
     {
         public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
